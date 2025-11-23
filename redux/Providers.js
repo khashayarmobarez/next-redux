@@ -1,10 +1,14 @@
 import React from 'react'
+import { Provider } from 'react-redux'
+import { store } from './store'
 
-function Providers() {
+function Providers({children}) {
+
   return (
-    <div>
-      
-    </div>
+    <Provider store={store}>
+        {/* children components will go here */}
+        {children}
+    </Provider>
   )
 }
 

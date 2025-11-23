@@ -1,11 +1,11 @@
-import React from 'react'
+import { configureStore } from "@reduxjs/toolkit";
+import counterReducer from "./features/counterSlice";
 
-function store() {
-  return (
-    <div>
-      
-    </div>
-  )
-}
 
-export default store
+const store = configureStore({
+    reducer: {
+        counter: counterReducer,
+    },
+});
+
+export default store;
